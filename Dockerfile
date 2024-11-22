@@ -12,7 +12,7 @@ RUN python3 -m pip install --no-cache-dir hytera-homebrew-bridge --upgrade
 
 # Minimal-Config-Datei herunterladen
 RUN apt-get update && apt-get install -y curl && \
-    curl "https://raw.githubusercontent.com/OK-DMR/Hytera_Homebrew_Bridge/master/settings.ini.minimal.default" -o settings.ini && \
+    curl "https://raw.githubusercontent.com/OK-DMR/Hytera_Homebrew_Bridge/master/settings.ini" -o settings.ini && \
     apt-get remove -y curl && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 # Ports für UDP freigeben
